@@ -1,0 +1,1 @@
+image.png - the output on browser
