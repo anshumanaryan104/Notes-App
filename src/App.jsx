@@ -2,6 +2,7 @@ import './index.css';
 import NotesPage from './notespage';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Signup from './Signup';
+import ThemeProvider from './ThemeProvider';
 
 
 
@@ -10,7 +11,8 @@ import Signup from './Signup';
 
 
 function App(){
- return( <div>
+ return(
+  <ThemeProvider>
     <BrowserRouter>
     <Routes>
       <Route path="/" element={<Signup/>}/>
@@ -18,7 +20,7 @@ function App(){
       <Route path="/newnotes" element={<NotesPage/>}/>
     </Routes>
     </BrowserRouter>
-  </div>
+  </ThemeProvider>
  )
 }
 
